@@ -2,22 +2,36 @@
 Beschreibung der Inhalte der einzelnen Ordner:
 
 GUI
+
 	Einfaches Abaqus-Plugin zur Konfiguration eines Modells für die USR VFRICTION
 
 Kontinuum
+
 	VFRICTION_Conti.for
+	
 		User Subroutine fuer Kontinuum-Modelle
+		
 	Job-Kontinuum-raw.inp
+	
 		.inp-File vor Anwendung der GUI
+		
 	Job-Kontinuum.inp
+	
 		Finales .inp-File nach Anwendung der GUI
+		
 
 Shell
+
 	VFRICTION_Shell.for
+	
 		User Subroutine fuer Shell-Modelle (Variablen firstIntProp und seconIntProp muessen von Hand angepasst werden)
+		
 	Job-Shell-raw.inp
+	
 		.inp-File vor Anwendung der GUI
+		
 	Job-Shell.inp
+	
 		Finales .inp-File nach Anwendung der GUI
 
 
