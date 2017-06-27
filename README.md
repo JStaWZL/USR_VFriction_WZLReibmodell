@@ -1,4 +1,48 @@
 # USR_VFriction
+
+Description of the content of the directories:
+
+GUI
+
+	Simple Wizard (Abaqus plug-in) for configuring an Abaqus model for the USR VFRICTION
+
+Kontinuum
+
+	VFRICTION_Conti.for
+		User Subroutine for a Continuum model
+		
+	Job-Kontinuum-raw.inp
+		.inp-File before the wizard
+		
+	Job-Kontinuum.inp
+		Final .inp-File after the wizard
+Shell
+
+	VFRICTION_Shell.for
+		User Subroutine for a shell model (the variables firstIntProp and secondIntProp have to be changed by hand)
+		
+	Job-Shell-raw.inp
+		.inp-File before the wizard
+		
+	Job-Shell.inp
+		Final .inp-File after the wizard
+
+
+
+
+How to include the User Subroutine using the Abaqus plugin
+
+
+1. Create .inp-File of the Abaqus model
+2. Open the GUI plug-in in Abaqus and follow the menue
+3. Compile the corresponding Fortran Subroutine (Continuum or Shell) in your Working Directory
+4. Start the .inp-File in your Working Directory (with compiled USR, .env-File and empty "TMP_Scratch"-Directory) via Batch-File or command window
+5. The results can be seen in the Abaqus-Viewer as FV
+
+
+
+
+
 Beschreibung der Inhalte der einzelnen Ordner:
 
 GUI
@@ -24,7 +68,7 @@ Shell
 
 	VFRICTION_Shell.for
 	
-		User Subroutine fuer Shell-Modelle (Variablen firstIntProp und seconIntProp muessen von Hand angepasst werden)
+		User Subroutine fuer Shell-Modelle (Variablen firstIntProp und secondIntProp muessen von Hand angepasst werden)
 		
 	Job-Shell-raw.inp
 	
